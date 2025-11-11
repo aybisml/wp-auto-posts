@@ -1,48 +1,51 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# ========================================
+#  WP Auto Posts Plugin - .gitignore
+# ========================================
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.swp
+*.swo
 
-# Configuration
-wp-config.php
+# IDE / Editor folders
+.vscode/
+.idea/
 
-# Example themes
-/wp-content/themes/twenty*/
+# Composer / Node
+vendor/
+node_modules/
+package-lock.json
+yarn.lock
 
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# Logs & backups
 *.log
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
 
-# htaccess
-/.htaccess
+# WordPress build/test files
+.wp-cli/
+tests/
+coverage/
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# Cache / temporary export
+/cache/
+*.csv
+*.bak.csv
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# Ignore private configs
+.env
+.env.*
+*.local
+
+# ========================================
+# Keep plugin files
+# ========================================
+!wp-auto-posts.php
+!assets/
+!README.md
